@@ -1,5 +1,5 @@
 
-# HW2 EE599 - Computing Principles for Electrical Engineers
+# HW2 EE538 - Computing Principles for Electrical Engineers
 
 - Please clone the repository, edit [README.md](README.md) to answer the questions, and fill up functions to finish the homework.
 - For non-coding questions, fill out the answers below each question. Please write your answer there.
@@ -11,19 +11,25 @@
 
 ## Question 1 (10 Points. Easy)
 
-Write several functions with the same name ```myfunction``` in [cpplib.cc](src/lib/cpplib.cc). And using function overloading to satisfy the following requirements:
+Write several functions with the same name ```IsGreaterThan``` in [cpplib.cc](src/lib/cpplib.cc). And using function overloading to satisfy the following requirements:
 
-- All three functions take 2 parameters as the input.
-- If both inputs are integers or string, compare them and return the result if they are equal, else return false.
-- If the first input is an integer and the second input is a string or vice-versa your code should return true if the value of string is equal to the integer, else return false. Notice string "05" is equal to integer 5.
+- All functions take exactly 2 inputs.
+- Each input is either an integer or a string.
+- If both inputs are integers, and if the first input is larger than the second input, return true, otherwise return false.
+- If both inputs are strings, compare the number of characters in each string. If the first string has more characters than the second string, return true, otherwise return false.
+- If one input is an integer, and the other input is a string that contains only numeric characters, then compare the numeric value represented by the string and the value of the integer. If the first input value is larger than the second input value, return true, otherwise return false. 
+- You need to skip the leading zeros in numeric strings when comparing with an integer input. For example, "05" denotes integer value 5. 
+- If one input is an integer, and the other input is a string that contains non-numeric characters, return false.
 
 Examples:
 
-- input: (5, 5), output: true
+- input: (10, 5), output: true
 - input: (3, 5), output: false
-- input: (“abc”, “efg”), output: false
-- input: (“EE”, 599), output: false
-- input: ("05", 5), output: true
+- input: (“aBcd”, “efg”), output: true
+- input: (“a-b”, “cdefg”), output: false
+- input: (“588”, 599), output: false
+- input: ("007", 5), output: true
+- input: (599, “598.9”), output: false
 
 Write several tests using GTest for your function in [tests/q1_student_test.cc](tests/q1_student_test.cc).
 
