@@ -50,7 +50,7 @@ Answer:
 
 ## Question 3 (10 Points. Easy)
 
-Write a function RemoveIntersection that will remove the values that appear in both input vectors.
+Write a function RemoveIntersection that will remove the values that appear in both input vectors. You may return the result in any order.
 Implement this using
 
 - **pass by pointers**
@@ -67,9 +67,9 @@ Before: x = [1, 2, 3], y = [3, 4, 5] \
 We call RemoveIntersection(x,y) \
 After: x = [1, 2], y = [4, 5]
 
-Before: x = [1, 2, 2], y = [2, 4, 5] \
+Before: x = [1, 2, 2, 2], y = [2, 4, 5] \
 We call RemoveIntersection(x,y) \
-After: x = [1], y = [4, 5]
+After: x = [1, 2, 2], y = [4, 5]
 
 Write several tests using GTest for your function in [tests/q3_student_test.cc](tests/q3_student_test.cc).
 
