@@ -64,11 +64,11 @@ Implement this using
 
 Example :\
 Before: x = [1, 2, 3], y = [3, 4, 5] \
-We call RemoveIntersectionByPointer(x,y) \
+We call RemoveIntersection(x,y) \
 After: x = [1, 2], y = [4, 5]
 
 Before: x = [1, 2, 2], y = [2, 4, 5] \
-We call RemoveIntersectionByPointer(x,y) \
+We call RemoveIntersection(x,y) \
 After: x = [1], y = [4, 5]
 
 Write several tests using GTest for your function in [tests/q3_student_test.cc](tests/q3_student_test.cc).
