@@ -108,8 +108,8 @@ bazel test tests:q4_student_test
 
 ## Question 5 (15 Points. Easy)
 
-Write a function that converts a string to upper case. Write a simple function ```void CPPLib::ToUpper(std::string& input)``` in [cpplib.cc](src/lib/cpplib.cc). The input string is strictly alphanumeric.
-  - Example: input: “ee599”, output: “EE599”
+Write a function that converts a string to lower case and remove all punctuation characters. Write a simple function ```void CPPLib::CleanString(std::string& input)``` in [cpplib.cc](src/lib/cpplib.cc). The input string is strictly alphanumeric.
+  - Example: input: “This is the fifth question in HW2 for EE-538.......”, output: “this is the fifth question in hw2 for ee538"
   - Use of [transform](http://www.cplusplus.com/reference/algorithm/transform/) is recommended but not a must.
 
 Write several tests using GTest for your function in [tests/q5_student_test.cc](tests/q5_student_test.cc).
