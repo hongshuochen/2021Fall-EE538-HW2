@@ -50,22 +50,26 @@ Answer:
 
 ## Question 3 (10 Points. Easy)
 
-Write a function swap that will swap the values of the inputs.
+Write a function RemoveIntersection that will remove the values that appear in both input vectors.
 Implement this using
 
 - **pass by pointers**
 
-  ```void CPPLib::SwapByPointer(float *input1, float *input2);```
+  ```void CPPLib::RemoveIntersectionByPointer(std::vector<int> *input1, std::vector<int> *input2);```
 
 - **pass by references**
 
-  ```void CPPLib::SwapByReference(float &input1, float &input2);```
+  ```void CPPLib::RemoveIntersectionByReference(std::vector<int> &input1, std::vector<int> &input2);```
 
 
 Example :\
-Before: x = 10, y = 15 \
-We call Swap(x,y) \
-After: x = 15, y = 10
+Before: x = [1, 2, 3], y = [3, 4, 5] \
+We call RemoveIntersectionByPointer(x,y) \
+After: x = [1, 2}, y = [4, 5] \
+
+Before: x = [1, 2, 2], y = [2, 4, 5] \
+We call RemoveIntersectionByPointer(x,y) \
+After: x = [1], y = [4, 5] \
 
 Write several tests using GTest for your function in [tests/q3_student_test.cc](tests/q3_student_test.cc).
 
