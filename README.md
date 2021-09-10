@@ -9,7 +9,7 @@
 - Deadline: **Friday, February 19th by 6:30 pm**
 - Total: 120 points. 100 points is considered full credit.
 
-## Question 1 (10 Points. Easy)
+## Question 1 (15 Points. Easy)
 
 Write several functions with the same name ```IsGreaterThan``` in [cpplib.cc](src/lib/cpplib.cc). And using function overloading to satisfy the following requirements:
 
@@ -38,13 +38,13 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q1_student_test
 ```
 
-## Question 2 (10 Points. Easy)
+## Question 2 (5 Points. Easy)
 
 How would you find the size of a non-dynamic array? (We are asking about an array, not a vector). Provide the example and outputs of your run for:
 
-- An array of integers
+- An array of double
 - An array of chars
-- An array of floats
+- An array of boolean
 
 Answer:
 
