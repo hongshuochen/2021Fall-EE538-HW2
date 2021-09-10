@@ -9,7 +9,7 @@
 - Deadline: **Friday, February 19th by 6:30 pm**
 - Total: 120 points. 100 points is considered full credit.
 
-## Question 1 (15 Points. Easy)
+## Question 1 (10 Points. Easy)
 
 Write several functions with the same name ```IsGreaterThan``` in [cpplib.cc](src/lib/cpplib.cc). And using function overloading to satisfy the following requirements:
 
@@ -48,7 +48,7 @@ How would you find the size of a non-dynamic array? (We are asking about an arra
 
 Answer:
 
-## Question 3 (10 Points. Easy)
+## Question 3 (15 Points. Easy)
 
 Write a function RemoveIntersection that will remove the values that appear in both input vectors. You may return the result in any order.
 Implement this using
