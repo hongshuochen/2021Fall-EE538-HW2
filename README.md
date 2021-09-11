@@ -163,12 +163,12 @@ bazel test tests:q6_student_test
 
  The function should 
 - find the kth largest number of the vector, called pivot. (k counts from 1, e.g. the 1st largest means the largest number in the vector.)
-- then rearrange the vector such that all the numbers smaller than the pivot will be on pivot's left side in ascending order and all the numbers larger than the pivot will be on pivot's right side in descending order.
+- then rearrange the vector such that all the numbers smaller than the pivot will be on pivot's left side and all the numbers larger than the pivot will be on pivot's right side.
 
 Example 1:\
-Input: vector is {1,2,3,4,5,6,7}, and k is 3.\
-Output: {1,2,3,4,5,7,6}\
-Here the pivot is 5.
+Input: vector is {7,3,4,6,5,2,1}, and k is 3.\
+Output: {3,4,2,1,5,7,6}\
+Here the pivot is 5, which is the 3rd largest number in the vector.
 
 Write several tests using GTest for your function in [tests/q7_student_test.cc](tests/q8_student_test.cc).
 
@@ -202,6 +202,8 @@ Output: false (because 'USC' and 'UCLA' are not the same word)
 Example 5:\
 Input: pattern = "abc", strs = {USC, wins}\
 Output: false (because the length of `pattern` and `strs` are not the same)
+
+Note words with lower letters 
 
 Write several tests using GTest for your function in [tests/q8_student_test.cc](tests/q8_student_test.cc).
 
