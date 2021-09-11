@@ -167,7 +167,7 @@ bazel test tests:q6_student_test
 
 Below is an example.
 
-Input: vector is {5, 3, 8, 5, 2, 0, 1, 3, 1, 4}, and k is 4.\
+Input: vector is {5, 3, 8,  5, 2, 0, 1, 3, 1, 4}, and k is 4.\
 Output: {0, 1, 1, 2, 3, 3, 4, 8, 5, 5}\
 Here the pivot is 4.
 
@@ -180,8 +180,7 @@ bazel test tests:q7_student_test
 
 ## Question 8 (20 Points. Medium)
 
-Given a non-empty string `pattern` and a non-empty vector of string `strs`, find if `strs` follows the same `pattern`.
-Write a function `bool Match(const std::string& pattern, const std::vector<std::string>& strs)` that returns true if the  `strs` follows the same `pattern`, and false if it does not.
+Given a non-empty string `pattern` and a non-empty vector of string `strs`, write a function `bool Match(const std::string& pattern, const std::vector<std::string>& strs)` that returns true if the  `strs` follows the same `pattern`, and false if it does not.
 
 Example 1:\
 Input: pattern = "abba", strs = {bat, cat, cat, bat}\
@@ -195,9 +194,11 @@ Example 3:\
 Input: pattern = "abc", strs = {USC, wins}\
 Output: false
 
+Please indicate the time complexity.
+
 Write several tests using GTest for your function in [tests/q8_student_test.cc](tests/q8_student_test.cc).
 
-Please create your test cases and run the following command to verify the functionality of your program.
+Please create your test cases and run the following command to verify the functionality of your program. 
 ```
 bazel test tests:q8_student_test
 ```
