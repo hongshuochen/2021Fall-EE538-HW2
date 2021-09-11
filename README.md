@@ -159,17 +159,16 @@ bazel test tests:q6_student_test
 
 ## Question 7 (20 Points. Easy)
 
- Write a function ```void Rearrange(std::vector<int> &input, int k)``` in [cpplib.cc](src/lib/cpplib.cc), where ```std::vector<int> &input``` is a non-empty unsorted vector , and `k` is a positive integer and not greater than the size of input vector.
+ Write a function `void CPPLib::Rearrange(std::vector<int> &input, int k)`in [cpplib.cc](src/lib/cpplib.cc), where `std::vector<int> &input` is a non-empty unsorted vector with no duplicate numbers, and `k` is a positive integer and not greater than the size of input vector.
 
  The function should 
-- find the kth largest number of the vector, called pivot.
+- find the kth largest number of the vector, called pivot. (k counts from 1, e.g. the 1st largest means the largest number in the vector.)
 - then rearrange the vector such that all the numbers smaller than the pivot will be on pivot's left side in ascending order and all the numbers larger than the pivot will be on pivot's right side in descending order.
 
-Below is an example.
-
-Input: vector is {5,3,8, 5,2,0,1,3,1,4}, and k is 4.\
-Output: {0,1,1,2,3,3,4,8,5,5}\
-Here the pivot is 4.
+Example 1:\
+Input: vector is {1,2,3,4,5,6,7}, and k is 3.\
+Output: {1,2,3,4,5,7,6}\
+Here the pivot is 5.
 
 Write several tests using GTest for your function in [tests/q7_student_test.cc](tests/q8_student_test.cc).
 
@@ -178,23 +177,27 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q7_student_test
 ```
 
-Please indicate the time complexity:
+Please also indicate the time complexity:
 
 ## Question 8 (20 Points. Medium)
 
-Given a non-empty string `pattern` and a non-empty vector of string `strs`, write a function `bool Match(const std::string& pattern, const std::vector<std::string>& strs)` that returns true if the  `strs` follows the same `pattern`, and false if it does not.
+Given a non-empty string `pattern` and a non-empty vector of string `strs`, write a function `bool CPPLib::Match(const std::string& pattern, const std::vector<std::string>& strs)` that returns true if the  `strs` follows the same `pattern`, and false if it does not.
 
 Example 1:\
 Input: pattern = "abba", strs = {bat, cat, cat, bat}\
-Output: true
+Output: true (because 'bat' appears on the 1th and 4th place, 'cat' appears on the 2th and 3th place)
 
 Example 2:\
-Input: pattern = "aba", strs = {USC, defeats, UCLA}\
-Output: false
+Input: pattern = "abab", strs = {apple, banana, apple, banana}\
+Output: true (because 'apple' appears on the 1th and 3th place, 'banana' appears on the 2th and 4th place)
 
 Example 3:\
+Input: pattern = "aba", strs = {USC, defeats, UCLA}\
+Output: false (because 'USC' and 'UCLA' are not the same word)
+
+Example 4:\
 Input: pattern = "abc", strs = {USC, wins}\
-Output: false
+Output: false (because the length of `pattern` and `strs` are not the same)
 
 Write several tests using GTest for your function in [tests/q8_student_test.cc](tests/q8_student_test.cc).
 
@@ -203,4 +206,4 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q8_student_test
 ```
 
-Please indicate the time complexity:
+Please also indicate the time complexity:
