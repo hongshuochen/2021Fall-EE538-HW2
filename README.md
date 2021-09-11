@@ -163,7 +163,7 @@ bazel test tests:q6_student_test
 
  The function should 
 - find the kth largest number of the vector, called pivot. (k counts from 1, e.g. the 1st largest means the largest number in the vector.)
-- then rearrange the vector such that all the numbers smaller than the pivot will be on pivot's left side and all the numbers larger than the pivot will be on pivot's right side.
+- then rearrange the vector such that all the numbers smaller than the pivot will be on pivot's left side and all the numbers larger than the pivot will be on pivot's right side. Keep the numbers in both sides in the original order.
 
 Example 1:\
 Input: vector is {7,3,4,6,5,2,1}, and k is 3.\
