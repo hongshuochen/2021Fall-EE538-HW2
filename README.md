@@ -131,9 +131,9 @@ bazel test tests:q5_student_test
 
 ## Question 6 (20 Points. Medium)
 
-Given an array of integers `arr`, a lucky integer is an integer which has a frequency in the array equal to its value.
+Given an array of integers input, a lucky integer is an integer which has a frequency in the array equal to its value.
 
-Write a function ```int findLucky(vector<int>& arr)``` in [cpplib.cc](src/lib/cpplib.cc) that returns a lucky integer in the array. If there are multiple lucky integers return the **largest** of them. If there is no lucky integer return **-1**.
+Write a function ```int CPPLib::findLucky(std::vector<int> &input)``` in [cpplib.cc](src/lib/cpplib.cc) that returns a lucky integer in the array. If there are multiple lucky integers return the **largest** of them. If there is no lucky integer return **-1**.
 
 Example 1:\
 Input: arr = [2,2,3,4]\
