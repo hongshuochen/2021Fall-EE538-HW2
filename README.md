@@ -138,7 +138,7 @@ Write a function ```int CPPLib::findLucky(std::vector<int> &input)``` in [cpplib
 Example 1:\
 Input: arr = [2,2,3,4]\
 Output: 2\
-Explanation: The The only lucky number in the array is 2 because frequency[2] == 2.
+Explanation: The only lucky number in the array is 2 because frequency[2] == 2.
 
 Example 2:\
 Input: arr = [1,2,2,3,3,3]\
