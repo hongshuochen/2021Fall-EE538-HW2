@@ -185,17 +185,21 @@ Given a non-empty string `pattern` and a non-empty vector of string `strs`, writ
 
 Example 1:\
 Input: pattern = "abba", strs = {bat, cat, cat, bat}\
-Output: true (because 'bat' appears on the 1th and 4th place, 'cat' appears on the 2th and 3th place)
+Output: true (because 'bat' appears on the 1st and 4th place, 'cat' appears on the 2nd and 3rd place)
 
 Example 2:\
 Input: pattern = "abab", strs = {apple, banana, apple, banana}\
-Output: true (because 'apple' appears on the 1th and 3th place, 'banana' appears on the 2th and 4th place)
+Output: true (because 'apple' appears on the 1st and 3rd place, 'banana' appears on the 2nd and 4th place)
 
 Example 3:\
+Input: pattern = "abc", strs = {rule, is, rule}\
+Output: false (because the 1st and the 3rd words should be different)
+
+Example 4:\
 Input: pattern = "aba", strs = {USC, defeats, UCLA}\
 Output: false (because 'USC' and 'UCLA' are not the same word)
 
-Example 4:\
+Example 5:\
 Input: pattern = "abc", strs = {USC, wins}\
 Output: false (because the length of `pattern` and `strs` are not the same)
 
