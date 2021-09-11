@@ -79,10 +79,10 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q3_student_test
 ```
 
-## Question 4 (20 Points. Easy)
+## Question 4 (25 Points. Easy)
 
 - Write a function that takes a vector of positive integers as input. The output is the same vector where all duplicates are removed. Note that the output is the same vector means the function's return type should be void and do the modifications on the input vector.
-  - Example: before: v=[1, 2, 2, 4], after : v=[1, 2, 4]
+  - Example: before: v=[2, 2, 3, 3, 4], after : v=[2, 3, 4]
   - Solve this for the following cases:
     - You cannot use std::set
   
@@ -90,13 +90,23 @@ bazel test tests:q3_student_test
     - You can use std::set
 
     ```void CPPLib::UniqueVectorBySet(std::vector<int> &input)```
-- Write a function ```void CPPLib::ReverseVector(std::vector<int> &input)``` that takes a vector of positive integers as input. The output is the same vector but in the reversed order:
-  - Example: before: [1, 2, 3], after:  [3, 2, 1]
-- Write a function ```void CPPLib::PrimeVector(std::vector<int> &input)``` that takes a vector of positive integers as input. The output should be the same vector where all numbers are prime numbers. The order of modified vector should follow the order of the input vector.
-  - Example: before: [1, 2, 3, 6], after: [2, 3]
-- Write a function ```std::vector<int> CPPLib::IntersectVectors(std::vector<int> &input1, std::vector<int> &input2)``` that takes two vectors v1 and v2 and returns a new vector that is the **intersection** of the values in v1 and v2. The order of output vector should follow the order of the first input vector.
+  
+- Write a function ```std::vector<int> CPPLib::ReverseVectorByStack(std::vector<int> &input)``` that takes a vector of positive integers as an input and **reverse** its value.
 
-  - Example: input: (v1=[1, 2, 3, 4, 7], v2=[3, 4, 5, 6]), output = [3, 4]
+  - Example: before: [1, 2, 3], after:  [3, 2, 1]
+  - Use of **stack** is needed
+  
+- Write a function ```void CPPLib::ReverseString(std::string &input)``` that takes a string as an input and **reverse** its value.
+
+  - Example: before: "EE538", after:  "835EE"
+  - You cannot use any new local variable of type string or vector or array, but you can create extra O(1) space, such as *int*. The reverse should happen **in place** (i.e. on the input string). 
+  
+- Write a function ```void CPPLib::PrimeVector(std::vector<int> &input)``` that takes a vector of positive integers as input. The output should be the same vector where all numbers are prime numbers. The order of modified vector should follow the order of the input vector.
+  
+  - Example: before: [1, 2, 3, 6], after: [2, 3]
+  
+- Write a function ```std::vector<int> CPPLib::UnionVectors(std::vector<int> &input1, std::vector<int> &input2)``` that takes two vectors v1 and v2 and returns a new vector that is the **union** of the values in v1 and v2. All the value in return vector should be **unique**. 
+
 
 Write several tests using GTest for your function in [tests/q4student_test.cc](tests/q4_student_test.cc).
 
@@ -119,47 +129,49 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q5_student_test
 ```
 
-## Question 6 (25 Points. Medium)
+## Question 6 (20 Points. Medium)
 
-A palindrome is a word, phrase, or other sequences of characters that reads the same backward as forward, such as **madam**, **racecar**, or the number **10801**.
+Given an array of integers `arr`, a lucky integer is an integer which has a frequency in the array equal to its value.
 
- Write a function ```bool canBePalindrome(const std::string &str)``` in [cpplib.cc](src/lib/cpplib.cc) that returns true if the permutation of the input could form a palindrome. and false if it is not.
+Write a function ```int findLucky(vector<int>& arr)``` in [cpplib.cc](src/lib/cpplib.cc) that returns a lucky integer in the array. If there are multiple lucky integers return the **largest** of them. If there is no lucky integer return **-1**.
 
+Example 1:\
+Input: arr = [2,2,3,4]\
+Output: 2\
+Explanation: The The only lucky number in the array is 2 because frequency[2] == 2.
 
-Example:\
-Input: str = "code".\
-Output: false.\
-Input: str = "aab".\
-Output: true.
+Example 2:\
+Input: arr = [1,2,2,3,3,3]\
+Output: 3\
+Explanation: 1, 2 and 3 are all lucky numbers, return the largest of them.
 
-Write several tests using GTest for your function in [tests/q6_student_test.cc](tests/q6_student_test.cc).
+Example 3:\
+Input: arr = [5]\
+Output: -1
+
+several tests using GTest for your function in [tests/q6_student_test.cc](tests/q6_student_test.cc) and compute the time complexity of your implementation.
 
 Please create your test cases and run the following command to verify the functionality of your program.
+
 ```
 bazel test tests:q6_student_test
 ```
 
-## Question 7 (20 Points. Medium)
+## Question 7 (20 Points. Easy)
 
-Write a function ```vector<vector<string>> CPPLib::groupAnagrams(vector<string>& strs)``` in [cpplib.cc](src/lib/cpplib.cc).
-Write a function that given an array of strings strs, use map to group the anagrams together. You can return the answer in any order.
+ Write a function ```void Rearrange(std::vector<int> &input, int k)``` in [cpplib.cc](src/lib/cpplib.cc), where ```std::vector<int> &input``` is unsorted, and ```int k``` is positive and not greater than the size of input vector.
 
-An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+ The function should 
+- find the kth largest number of the vector, called pivot.
+- then rearrange the vector that all the numbers smaller than the pivot will be on pivot's left side in ascending order and all the numbers larger than the pivot will be on pivot's right side in descending order.
 
-Example 1:\
-Input: strs = ["eat","tea","tan","ate","nat","bat"]\
-Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+Below is an example.
 
-Example 2:\
-Input: strs = [""]\
-Output: [[""]]
+Input: vector is {5, 3, 8, 5, 2, 0, 1, 3, 1, 4}, and k is 4.\
+Output: {0, 1, 1, 2, 3, 3, 4, 8, 5, 5}\
+Here the pivot is 4.
 
-Example 3:\
-Input: strs = ["ab", "ba"]\
-Output: [["ab", "ba"]]
-
-
-Further, write several tests using GTest for your function in [tests/q7_student_test.cc](tests/q7_student_test.cc) and compute the time complexity of your implementation.
+Write several tests using GTest for your function in [tests/q7_student_test.cc](tests/q8_student_test.cc).
 
 Please create your test cases and run the following command to verify the functionality of your program.
 ```
@@ -168,24 +180,20 @@ bazel test tests:q7_student_test
 
 ## Question 8 (20 Points. Medium)
 
- Write a function ```void kthPeek(std::vector<int> &input, int k)``` in [cpplib.cc](src/lib/cpplib.cc), where ```std::vector<int> &input``` is unsorted, and ```int k``` is positive and not greater than the size of input vector.
+Given a non-empty string `pattern` and a non-empty vector of string `strs`, find if `strs` follows the same `pattern`.
+Write a function `bool Match(const std::string& pattern, const std::vector<std::string>& strs)` that returns true if the  `strs` follows the same `pattern`, and false if it does not.
 
- The function should 
-- find the kth smallest number of the vector, called pivot.
-- then rearrange the vector that all the numbers smaller than the pivot will be on pivot's left side in ascending order and all the numbers larger than the pivot will be on pivot's right side in descending order.
+Example 1:\
+Input: pattern = "abba", s = "bat cat cat bat"\
+Output: true
 
-Below is one example.
+Example 2:\
+Input: pattern = "aba", s = "USC defeats UCLA"\
+Output: false
 
-Input: 
-```
-Input vector is {637, 231, 123, 69, 43, 900, 10, 7, 21, 99, 0, 500}, k is 6.
-```
-Output: 
-```
-{0, 7, 10, 21, 43, 69, 900, 637, 500, 231, 123, 99 }
-``` 
-Here the pivot is 69.
-
+Example 3:\
+Input: pattern = "abc", s = "USC wins"\
+Output: false
 
 Write several tests using GTest for your function in [tests/q8_student_test.cc](tests/q8_student_test.cc).
 
