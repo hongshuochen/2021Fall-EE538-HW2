@@ -184,15 +184,15 @@ Given a non-empty string `pattern` and a non-empty vector of string `strs`, find
 Write a function `bool Match(const std::string& pattern, const std::vector<std::string>& strs)` that returns true if the  `strs` follows the same `pattern`, and false if it does not.
 
 Example 1:\
-Input: pattern = "abba", s = {bat, cat, cat, bat}\
+Input: pattern = "abba", strs = {bat, cat, cat, bat}\
 Output: true
 
 Example 2:\
-Input: pattern = "aba", s = {USC, defeats, UCLA}\
+Input: pattern = "aba", strs = {USC, defeats, UCLA}\
 Output: false
 
 Example 3:\
-Input: pattern = "abc", s = {USC, wins}\
+Input: pattern = "abc", strs = {USC, wins}\
 Output: false
 
 Write several tests using GTest for your function in [tests/q8_student_test.cc](tests/q8_student_test.cc).
