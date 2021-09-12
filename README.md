@@ -48,7 +48,7 @@ How would you find the size of a non-dynamic array? (We are asking about an arra
 
 Answer:
 
-## Question 3 (15 Points. Easy)
+## Question 3 (10 Points. Easy)
 
 Write a function RemoveIntersection that will remove the values that appear in both input vectors. You may return the result in any order.
 Implement this using
@@ -115,7 +115,7 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q4_student_test
 ```
 
-## Question 5 (15 Points. Easy)
+## Question 5 (10 Points. Easy)
 
 Write a function that converts a string to lower case and remove all punctuation characters. Write a simple function ```void CPPLib::CleanString(std::string& input)``` in [cpplib.cc](src/lib/cpplib.cc). The input string is strictly alphanumeric.
   - Example: input: “This is the fifth question in HW2 for EE-538.......”, output: “this is the fifth question in hw2 for ee538"
