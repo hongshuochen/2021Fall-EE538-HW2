@@ -181,7 +181,7 @@ Please also indicate the time complexity:
 
 ## Question 8 (20 Points. Medium)
 
-Given a non-empty string `pattern` and a non-empty vector of string `strs`, write a function `bool CPPLib::Match(const std::string& pattern, const std::vector<std::string>& strs)` that returns true if the  `strs` follows the same `pattern`, and false if it does not.
+Given a non-empty string `pattern` and a non-empty vector of string `strs`, write a function `bool CPPLib::Match(const std::string& pattern, const std::vector<std::string>& strs)` that returns true if the  `strs` follows the same `pattern` (i.e. each letter in `pattern` can be assigned to a string in `strs` and the order of strings in `strs` matches the order of the corresponding letters in `pattern`), and false if it does not.
 
 Example 1:\
 Input: pattern = "abba", strs = {bat, cat, cat, bat}\
