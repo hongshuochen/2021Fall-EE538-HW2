@@ -91,7 +91,7 @@ bazel test tests:q3_student_test
 
     ```void CPPLib::UniqueVectorBySet(std::vector<int> &input)```
   
-- Write a function ```std::vector<int> CPPLib::ReverseVector(std::vector<int> &input)``` that takes a vector of integers as an input. The output is the same vector but in the **reversed** order.
+- Write a function ```void CPPLib::ReverseVector(std::vector<int> &input)``` that takes a vector of integers as an input. The output is the same vector but in the **reversed** order.
 
   - Example: before: [1, 2, 3], after:  [3, 2, 1]
   
