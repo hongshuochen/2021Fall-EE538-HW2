@@ -6,7 +6,7 @@
 - For coding questions, please make sure that your code can run ```bazel run/test```. In this homework, you will need to fill up [cpplib.cc](src/lib/cpplib.cc) and tests in [tests](tests). **Do Not change or modify any given function names and input or output formats in both [cpplib.cc](src/lib/cpplib.cc) and tests in [tests](tests). Unexpected changes will result in **zero** credit.**
 - For coding questions, there is a black box testing for each question. All points are only based on passing the test cases or not (i.e. we don't grade your work by your source code). So, try to do comprehensive testing before your final submission.
 - For submission, please push your answers to Github before the deadline.
-- Deadline: **Friday, February 19th by 6:30 pm**
+- Deadline: **Monday, September 20th by 6:30 pm**
 - Total: 120 points. 100 points is considered full credit.
 
 ## Question 1 (10 Points. Easy)
