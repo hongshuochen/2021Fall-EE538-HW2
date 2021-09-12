@@ -19,7 +19,7 @@ class CPPLib {
   //q4
   void UniqueVectorNotBySet(std::vector<int> &input);
   void UniqueVectorBySet(std::vector<int> &input);
-  std::vector<int> ReverseVectorByStack(std::vector<int> &input);
+  void ReverseVector(std::vector<int> &input);
   void ReverseString(std::string &input);
   void PrimeVector(std::vector<int> &input);
   std::vector<int> UnionVectors(std::vector<int> &input1, std::vector<int> &input2);

@@ -20,7 +20,7 @@ void CPPLib::UniqueVectorNotBySet(std::vector<int> &input){
 void CPPLib::UniqueVectorBySet(std::vector<int> &input){
     // Please fill up this function.
 }
-std::vector<int> CPPLib::ReverseVectorByStack(std::vector<int> &input){
+void CPPLib::ReverseVector(std::vector<int> &input){
     // Please fill up this function.
 }
 void CPPLib::ReverseString(std::string &input){

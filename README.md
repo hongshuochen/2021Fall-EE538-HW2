@@ -91,10 +91,9 @@ bazel test tests:q3_student_test
 
     ```void CPPLib::UniqueVectorBySet(std::vector<int> &input)```
   
-- Write a function ```std::vector<int> CPPLib::ReverseVectorByStack(std::vector<int> &input)``` that takes a vector of positive integers as an input and **reverse** its value.
+- Write a function ```std::vector<int> CPPLib::ReverseVector(std::vector<int> &input)``` that takes a vector of integers as an input. The output is the same vector but in the **reversed** order.
 
   - Example: before: [1, 2, 3], after:  [3, 2, 1]
-  - Use of **stack** is needed
   
 - Write a function ```void CPPLib::ReverseString(std::string &input)``` that takes a string as an input and **reverse** its value.
 
