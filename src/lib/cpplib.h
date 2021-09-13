@@ -13,8 +13,8 @@ class CPPLib {
   // q1
   // Please create your functions here.
   //q3
-  void SwapByRefernce(float &input1, float &input2);
-  void SwapByPointer(float *input1, float *input2);
+  void RemoveIntersectionByReference(float &input1, float &input2);
+  void RemoveIntersectionByPointer(float *input1, float *input2);
 
   //q4
   void UniqueVectorNotBySet(std::vector<int> &input);
@@ -25,7 +25,7 @@ class CPPLib {
   std::vector<int> UnionVectors(std::vector<int> &input1, std::vector<int> &input2);
 
   //q5
-  void ToUpper(std::string& input);
+  void CleanString(std::string& input);
 
   // q6
   int findLucky(std::vector<int>& input);
