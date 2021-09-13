@@ -7,10 +7,10 @@
 // You should write 4 functions
 
 // Question 3
-void CPPLib::SwapByRefernce(float& input1, float& input2) {
+void CPPLib::RemoveIntersectionByReference(float& input1, float& input2) {
   // Please fill up this function.
 }
-void CPPLib::SwapByPointer(float* input1, float* input2) {
+void CPPLib::RemoveIntersectionByPointer(float* input1, float* input2) {
   // Please fill up this function.
 }
 
@@ -35,7 +35,7 @@ std::vector<int> CPPLib::UnionVectors(std::vector<int>& input1, std::vector<int>
 }
 
 // Question 5
-void CPPLib::ToUpper(std::string& input) {
+void CPPLib::CleanString(std::string& input) {
   // Please fill up this function.
 }
 
