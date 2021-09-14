@@ -13,8 +13,8 @@ class CPPLib {
   // q1
   // Please create your functions here.
   //q3
-  void RemoveIntersectionByReference(float &input1, float &input2);
-  void RemoveIntersectionByPointer(float *input1, float *input2);
+  void RemoveIntersectionByReference(std::vector<int> &input1, std::vector<int> &input2);
+  void RemoveIntersectionByPointer(std::vector<int> *input1, std::vector<int> *input2);
 
   //q4
   void UniqueVectorNotBySet(std::vector<int> &input);
