@@ -7,10 +7,10 @@
 // You should write 4 functions
 
 // Question 3
-void CPPLib::RemoveIntersectionByReference(float& input1, float& input2) {
+void CPPLib::RemoveIntersectionByReference(std::vector<int> &input1, std::vector<int> &input2) {
   // Please fill up this function.
 }
-void CPPLib::RemoveIntersectionByPointer(float* input1, float* input2) {
+void CPPLib::RemoveIntersectionByPointer(std::vector<int> *input1, std::vector<int> *input2) {
   // Please fill up this function.
 }
 
